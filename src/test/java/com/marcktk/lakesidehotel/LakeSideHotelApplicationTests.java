@@ -1,10 +1,10 @@
-package com.backend.soa;
+package com.marcktk.lakesidehotel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SoaApplicationTests {
+class LakeSideHotelApplicationTests {
 
 	@Test
 	void contextLoads() {
