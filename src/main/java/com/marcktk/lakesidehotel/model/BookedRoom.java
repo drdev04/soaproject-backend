@@ -15,21 +15,20 @@ import java.time.LocalDate;
 @NoArgsConstructor
 
 public class BookedRoom {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookingId;
+    private  Long bookingId;
 
-    @Column(name = "check_In")
+    @Column(name = "check_in")
     private LocalDate checkInDate;
 
-    @Column(name = "check_Out")
+    @Column(name = "check_out")
     private LocalDate checkOutDate;
 
-    @Column(name = "guest_FullName")
+    @Column(name = "guest_fullName")
     private String guestFullName;
 
-    @Column(name = "guest_Email")
+    @Column(name = "guest_email")
     private String guestEmail;
 
     @Column(name = "adults")
@@ -48,18 +47,18 @@ public class BookedRoom {
     @JoinColumn(name = "room_id")
     private Room room;
 
-    public void calculateTotalNumOfGuest() {
-        this.totalNumOfGuest = this.NumOfAdults + this.NumOfChildren;
+    public void calculateTotalNumberOfGuest(){
+        this.totalNumOfGuest = this.NumOfAdults + NumOfChildren;
     }
 
     public void setNumOfAdults(int numOfAdults) {
         NumOfAdults = numOfAdults;
-        calculateTotalNumOfGuest();
+        calculateTotalNumberOfGuest();
     }
 
     public void setNumOfChildren(int numOfChildren) {
         NumOfChildren = numOfChildren;
-        calculateTotalNumOfGuest();
+        calculateTotalNumberOfGuest();
     }
 
     public void setBookingConfirmationCode(String bookingConfirmationCode) {
